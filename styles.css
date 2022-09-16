@@ -91,6 +91,10 @@ p, .Original, h6 {
     margin-bottom: 0rem;
 }
 
+.Original {
+    text-decoration: line-through;
+}
+
 button {
     margin-bottom: 1rem;
     border-radius: 1rem;
