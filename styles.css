@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+html {
+    font-size: 16px;
+    font-family: "Fraunces";
+    font-weight: 500;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+    width: 75%; 
+    font-family: Montserrat;
+
+}
+
+section {
+background-color: white;
+border-radius: 1rem; /*
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%); 
+The original way I tried to position the section in the middle of the page 
+without a main element until I realized I could align the main element by setting
+a height on the body.
+*/
+display: grid; 
+grid-template-columns: 1fr 1fr; 
+flex: 1;
+}
+
+
+
+.BGimg { 
+    grid-column: 1 / span 1; 
+    background-image: url("images/image-product-desktop.jpg");
+    background-size: cover;
+    border-radius: 1rem 0 0 1rem; /*    
+    object-fit: contain; */
+}
+/*
+img {
+width: 100%;
+}  
+Tried the above with adding an image inside the div so I wouldn't need to set a background-image
+in css, but it kept my grid-box from shrinking when zooming out.
+*/
+
+
+.Product_Des {
+    border-radius: 0% 5% 5% 0%;
+    padding-left: 1rem;    
+    padding-right: 1rem; 
+    grid-column: 2 / span 1; 
+}
+
+h6, h1, p, button {
+    margin-top: 1rem;
+}
+
+h6, h1, p {
+    margin-bottom: 0rem;
+}
+
+p, .Original, h6 {
+    color: hsl(228, 12%, 48%);
+}
+
+h6 { 
+    font-family: "montserrat";
+    letter-spacing: 0.3rem;
+}
+.prices {
+    display: flex;
+    align-items: baseline;
+    margin: 0rem;
+}
+
+.Discounted {
+    margin-right: 1rem;
+    color:hsl(158, 36%, 37%);
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+}
+
+button {
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    border-style: none;
+    background-color: hsl(158, 36%, 37%);
+    padding: 0.5rem;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+button:hover {
+    font-weight: 700;
+    background-color: hsl(158, 36%, 17%)
+}
+
+svg {
+    margin-right: 0.5rem;
+}
+@media screen and (max-width: 480px) {
+   
+    
+    body {
+        align-items: center;
+    }
+
+    main {
+        width: 100%;
+    }
+
+section {
+    display: grid;
+    grid-template: 1fr 1fr / 100%;
+    border-radius: 5%; 
+}
+
+.BGimg {
+grid-row: 1 / span 1;
+grid-column: 1 / span 1;
+border-top-right-radius: 5%;
+border-bottom-left-radius: 0;
+background-image: url("images/image-product-mobile.jpg");
+}
+
+.Product_Des {
+grid-row: 2 / span 1;
+grid-column: 1 / span 1; 
+}
+}
