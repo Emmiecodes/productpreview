@@ -61,11 +61,11 @@ in css, but it kept my grid-box from shrinking when zooming out.
     grid-column: 2 / span 1; 
 }
 
-h6, h1, p, button {
+h1, h2, p, button {
     margin-top: 1rem;
 }
 
-h6, h1, p {
+h1, h2, p {
     margin-bottom: 0rem;
 }
 
@@ -73,9 +73,10 @@ p, .Original, h6 {
     color: hsl(228, 12%, 48%);
 }
 
-h6 { 
+.toUpperCase { 
     font-family: "montserrat";
     letter-spacing: 0.3rem;
+    text-transform: uppercase;
 }
 .prices {
     display: flex;
