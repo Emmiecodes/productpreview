@@ -75,7 +75,7 @@ p, .Original, h6 {
 
 .toUpperCase { 
     font-family: "montserrat";
-    letter-spacing: 0.3rem;
+    letter-spacing: 2rem;
     text-transform: uppercase;
 }
 .prices {
