@@ -4,6 +4,8 @@ html {
     font-size: 16px;
     font-family: "Fraunces";
     font-weight: 500;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -12,25 +14,20 @@ body {
   justify-content: center; 
   align-items: center;
   height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 main {
-    width: 75%; 
+    width: 75%;
+    max-width: 600px;
     font-family: Montserrat;
 
 }
 
 section {
 background-color: white;
-border-radius: 1rem; /*
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%); 
-The original way I tried to position the section in the middle of the page 
-without a main element until I realized I could align the main element by setting
-a height on the body.
-*/
+border-radius: 1rem; 
 display: grid; 
 grid-template-columns: 1fr 1fr; 
 flex: 1;
@@ -42,16 +39,9 @@ flex: 1;
     grid-column: 1 / span 1; 
     background-image: url("images/image-product-desktop.jpg");
     background-size: cover;
-    border-radius: 1rem 0 0 1rem; /*    
-    object-fit: contain; */
+    border-radius: 1rem 0 0 1rem;
 }
-/*
-img {
-width: 100%;
-}  
-Tried the above with adding an image inside the div so I wouldn't need to set a background-image
-in css, but it kept my grid-box from shrinking when zooming out.
-*/
+
 
 
 .Product_Des {
@@ -61,22 +51,25 @@ in css, but it kept my grid-box from shrinking when zooming out.
     grid-column: 2 / span 1; 
 }
 
-h1, h2, p, button {
+h1, p, button {
     margin-top: 1rem;
 }
 
-h1, h2, p {
+h1, p {
     margin-bottom: 0rem;
 }
 
-p, .Original, h6 {
+p, .Original {
     color: hsl(228, 12%, 48%);
 }
 
-.toUpperCase { 
-    font-family: "montserrat";
-    letter-spacing: 0.75rem;
+.toUpperCase {
     text-transform: uppercase;
+}
+
+h6 { 
+    font-family: "montserrat";
+    letter-spacing: 0.3rem;
 }
 .prices {
     display: flex;
@@ -121,10 +114,13 @@ svg {
     
     body {
         align-items: center;
+        padding: 0rem 0;
+        margin: 0;
+
     }
 
     main {
-        width: 100%;
+        width: 90%;
     }
 
 section {
