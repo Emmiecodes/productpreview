@@ -18,30 +18,34 @@ body {
   padding: 0;
 }
 
-main {
-    width: 75%;
+main { 
+    width: 75%; 
     max-width: 500px;
     font-family: Montserrat;
-
+    margin: 2rem 0;
 }
 
 section {
 background-color: white;
 border-radius: 1rem; 
 display: grid; 
-grid-template-columns: 1fr 1fr; 
-flex: 1;
+grid-template-columns: 1fr 1fr;
 }
 
 
 
 .BGimg { 
     grid-column: 1 / span 1; 
-    background-image: url("images/image-product-desktop.jpg");
-    background-size: cover;
     border-radius: 1rem 0 0 1rem;
 }
 
+img {
+    max-width: 100%;
+    min-height: 100%;
+    border-bottom-left-radius: 5%;
+    border-top-left-radius: 5%;
+
+}
 
 
 .Product_Des {
@@ -132,10 +136,12 @@ section {
 .BGimg {
 grid-row: 1 / span 1;
 grid-column: 1 / span 1;
-border-top-right-radius: 5%;
-border-bottom-left-radius: 0;
-background-image: url("images/image-product-mobile.jpg");
 }
+
+img {
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 0;
+    }
 
 .Product_Des {
 grid-row: 2 / span 1;
